@@ -4,8 +4,14 @@
 <head>
     <meta charset="utf-8" />
     <title>Iframe Test</title>
+    <script>
+        function sendMessage()
+        {
+            window.parent.postMessage("close", "*");
+        }
+    </script>
 </head>
 <body>
-
+    <button onclick="sendMessage()">Test</button>
 </body>
 </html>
